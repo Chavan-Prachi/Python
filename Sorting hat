@@ -1,0 +1,58 @@
+
+slytherin =0
+hufflepuff =0
+gryffindor =0
+ravenclaw =0
+
+que1 = int(input('Do you like dawn or dusk? \n 1) Dawn \n 2) Dusk \n:'))
+
+if que1 ==1:
+  gryffindor +=1
+  ravenclaw +=1
+elif que1 ==2:
+  hufflepuff +=1
+  slytherin +=1
+else:
+  print('Wrong input.')
+
+que2 = int(input('\nWhen you am dead, you want people to remember me as: \n 1) The Good \n 2) The Great \n 3) The wise \n 4) The Bold\n :'))
+
+if que2 ==1:
+  hufflepuff +=2
+elif que2 ==2:
+  slytherin +=2
+elif que2 ==3:
+  ravenclaw +=2
+elif que2 ==4:
+  gryffindor +=2
+else:
+  print('Wrong input.')
+
+que3 = int(input('\nWhich kind of instrument most pleases your ear? \n 1) The violin \n 2) The trump \n 3) the piano \n 4) The drum\n :'))
+
+if que3 == 1:
+  slytherin +=4
+elif que3 == 2:
+  hufflepuff +=4
+elif que3 == 3:
+  ravenclaw +=4
+elif que3 == 4:
+  gryffindor +=4
+else: 
+  print('Wrong input.') 
+
+print('\nFinal house scores: \nslytherin: ',slytherin)
+print('hufflepuff: ',hufflepuff)
+print('ravenclaw: ',ravenclaw)
+print('gryffindor: ',gryffindor)
+
+houses = {
+  'slytherin': slytherin,
+  'gryffindor': gryffindor,
+  'ravenclaw': ravenclaw,
+  'hufflepuff': hufflepuff
+}
+
+chosen_house = max(houses,key=houses.get)
+
+print('\nThe house you get is', chosen_house,'!')  
