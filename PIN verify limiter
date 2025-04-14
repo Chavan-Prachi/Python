@@ -1,0 +1,13 @@
+
+pin = 0
+tries = 0
+
+pin = int(input('Enter your PIN: \n'))
+while pin != 1234 and tries < 2:
+  pin = int(input('Incorrect PIN. Enter your PIN again: \n'))
+  tries+=1
+if tries ==2:
+  print('You are out of tries.\n')
+
+if pin == 1234: 
+  print('PIN accepted!\n')
