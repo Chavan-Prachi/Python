@@ -41,19 +41,6 @@ elif que3 == 4:
 else: 
   print('Wrong input.') 
 
-que3 = int(input('\nWhich is your favourite weather? \n 1) The rain \n 2) The trump \n 3) the piano \n 4) The drum\n :'))
-
-if que3 == 1:
-  slytherin +=4
-elif que3 == 2:
-  hufflepuff +=4
-elif que3 == 3:
-  gryffindor +=4
-elif que3 == 4:
-  ravenclaw +=4
-else: 
-  print('Wrong input.') 
-
 print('\nFinal house scores: \nslytherin: ',slytherin)
 print('hufflepuff: ',hufflepuff)
 print('ravenclaw: ',ravenclaw)
@@ -67,9 +54,12 @@ houses = {
 }
 
 chosen_house = max(houses,key=houses.get)
+print('\nThe house you get is', chosen_house,'!\n')  
 
-while chosen_house == max(houses, key=houses.get):
- print('\nThe house you get is', chosen_house,'!\n')  
+end = (input('Do you want to end the program(yes/no): '))
+
+while end.lower()== 'no':
+
  slytherin =0
  hufflepuff =0
  gryffindor =0
@@ -112,24 +102,11 @@ while chosen_house == max(houses, key=houses.get):
  else: 
   print('Wrong input.') 
 
- que3 = int(input('\nWhich is your favourite weather? \n 1) The rain \n 2) The trump \n 3) the piano \n 4) The drum\n :'))
-
- if que3 == 1:
-  slytherin +=4
- elif que3 == 2:
-  hufflepuff +=4
- elif que3 == 3:
-  gryffindor +=4
- elif que3 == 4:
-  ravenclaw +=4
- else: 
-  print('Wrong input.') 
-
  print('\nFinal house scores: \nslytherin: ',slytherin)
  print('hufflepuff: ',hufflepuff)
  print('ravenclaw: ',ravenclaw)
  print('gryffindor: ',gryffindor)
-
+ 
  houses = {
   'slytherin': slytherin,
   'gryffindor': gryffindor,
@@ -138,3 +115,6 @@ while chosen_house == max(houses, key=houses.get):
  }
 
  chosen_house = max(houses,key=houses.get)
+ print('\nThe house you get is', chosen_house,'!\n')  
+
+ end = (input('Do you want to end the program(yes/no): '))
